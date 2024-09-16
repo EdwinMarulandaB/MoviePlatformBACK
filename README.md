@@ -33,14 +33,16 @@ Este proyecto es una API REST para la gestión de películas desarrollada con Sp
 - mvn spring-boot:run: Inicia el servidor Spring Boot.
 
 ## Notas
-Tener en cuenta el cambio de la application.properties
+Crear la base de datos en MySQL:
+CREATE DATABASE MoviePlatform;
 
+Nota: No es necesario crear tablas ni cargar datos. La aplicación se encargará de generar el esquema y cargar los datos iniciales automáticamente.
+
+Configurar las propiedades de conexión a la base de datos en src/main/resources/application.properties. Asegúrate de ajustar el nombre de usuario y la contraseña según tu configuración local de MySQL:
+
+properties
 spring.application.name=MoviePlatform
 spring.datasource.url=jdbc:mysql://127.0.0.1:3306/MoviePlatform
 spring.datasource.username=root
-spring.datasource.password=edwin1413
-
-- Se debe colocar el datasource de la base de datos mysql local que se este usando (Solo se debe crear la base de datos ya
-  el esquema y los datos iniciales los carga la app automaticamente)
-- Cambiar la contraseña o el usuario si es necesario para aceder a la Base de datos
+spring.datasource.password=tu_contraseña
   
